@@ -35,7 +35,3 @@ symbols = 2*b - 1;
 X_delta = 1/Ts * upsample(symbols, over);
 time = linspace(0,N*T,N*over);
 
-%Part 4
-[phi, t] = srrc_pulse(T, over, A, a);
-X = conv(phi, X_delta) * Ts;
-X_time = time(1) + t(1) : Ts : time(end) + t(end) - Ts;
